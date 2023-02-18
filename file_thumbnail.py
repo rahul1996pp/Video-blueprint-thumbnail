@@ -98,7 +98,6 @@ path = input("[+] Enter path or drag and drop the folder : ").replace('"','')
 
 if path=='':
      path = input("[+] Enter path or drag and drop the folder : ").replace('"','')
-# path= r'D:\work\thum_file\test'
 
 files_name = glob(f"{path}/*.mp4")+glob(f"{path}/*.mkv")+glob(f"{path}/*.avi")
 if files_name:
@@ -124,6 +123,6 @@ for folder in folder_data:
 
 
 df = DataFrame(data=data_list)
-# df.to_html("files.html",escape=False,index=False,formatters=dict(thumbnail=fun),justify='center')
+df.to_html("files.html",escape=False,index=False,formatters=dict(thumbnail=fun),justify='center')
 df.to_excel("files.xlsx",index=False)
 
